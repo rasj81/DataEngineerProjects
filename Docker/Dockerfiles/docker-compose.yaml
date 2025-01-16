@@ -14,9 +14,6 @@ networks:
     image: python:3.9.1
   pgdatabase:
     container_name: pgdatabase
-    build:
-      context: ./pgdatabase
-      dockerfile: Dockerfile
     image: postgres:13
     environment:
       - POSTGRES_USER=root
