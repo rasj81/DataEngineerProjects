@@ -12,7 +12,7 @@ services:
     build:
       context: ./python
       dockerfile: Dockerfile
-    image: python:3.9.1pip
+    image: python:3.9.1
   pgdatabase:
     container_name: pgdatabase
     image: postgres:13
