@@ -14,7 +14,7 @@ networks:
     image: python:3.9.1
   pgdatabase:
     container_name: pgdatabase
-        build:
+    build:
       context: ./pgdatabase
       dockerfile: Dockerfile
     image: postgres:13
@@ -32,7 +32,7 @@ networks:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
   pgadmin:
     container_name: pgadmin
-        build:
+    build:
       context: ./pgadmin
       dockerfile: Dockerfile
     image: dpage/pgadmin4
