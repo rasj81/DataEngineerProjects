@@ -17,7 +17,6 @@ networks:
     build:
       context: ./pgdatabase
       dockerfile: Dockerfile
-
     image: postgres:13
     environment:
       - POSTGRES_USER=root
