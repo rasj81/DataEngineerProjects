@@ -1,7 +1,5 @@
 FROM dpage/pgadmin4
 
-# RUN apt-get update && apt-get upgrade
-# RUN apt-get -y install pgcli
-# RUN pip install pandas sqlalchemy psycopg2
+# RUN cp -r /var/lib/pgadmin /home
 
-ENTRYPOINT ["/bin/echo"]
+# ENTRYPOINT ["/bin/echo"]

@@ -1,5 +1,8 @@
 FROM postgres:13
 
-RUN sudo apt-get update && sudo apt-get install pgcli -y
+# RUN apt-get update \
+#    && apt-get -y install wget pgcli \
+#    && apt-get clean \
+#    && pip install pandas sqlalchemy psycopg2
 
-ENTRYPOINT ["/bin/echo"]
+# ENTRYPOINT ["/bin/echo"]

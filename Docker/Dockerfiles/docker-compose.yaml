@@ -1,17 +1,36 @@
 ## Build environment for Data Engineer Zoomcamp ##
 
-networks:
-  pg-network:
-    driver: bridge
-    driver_opts:
-      com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
-
+services:
   python:
     container_name: python
     build:
       context: ./python
       dockerfile: Dockerfile
     image: python:3.9.1
+    volumes:
+      - "../Volumes/python_data:/app:rw"
+  jupyter:
+    container_name: jupyter
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    image: jupyter/pyspark-notebook
+    volumes:
+      - "../Volumes/jupyter_data:/home/codespace/work:rw"
+      - "../Volumes/jupyter-secrets:/etc/secrets:rw"
+      - "../Volumes/jupyter-spark_data:/sparkdata:rw"
+    command:
+     "start-notebook.sh --NotebookApp.token='jupyter'"
+    ports:
+      - "8888:8888"
+    user: root
+    working_dir: /home/codespace/work
+    environment:
+      JUPYTER_ENABLE_LAB: 1
+      NB_USER: ${USER}
+      NB_GID: 1000
+      CHOWN_HOME: 'yes' 
+      CHOWN_HOME_OPTS: '-R'   
   pgdatabase:
     container_name: pgdatabase
     build:
@@ -23,13 +42,9 @@ networks:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=ny_taxi
     volumes:
-      - "./Data/ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
+      - "../Volumes/ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
     ports:
       - "5432:5432"
-    networks:
-      - pg-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
   pgadmin:
     container_name: pgadmin
     build:
@@ -39,11 +54,8 @@ networks:
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=root
+    volumes:
+      - "../Volumes/pgadmin_data/pgadmin:/var/lib/pgadmin:rw"
     ports:
       - "8080:80"
-    networks:
-      - pg-network
-    depends_on:
-      pgdatabase:
-        condition: service_healthy
 
