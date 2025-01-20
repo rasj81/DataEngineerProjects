@@ -1,2 +1,3 @@
+.DS_Store
 Data/
-Docker/Volumes/
+Dockerfiles/Volumes
