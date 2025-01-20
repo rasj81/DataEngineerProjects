@@ -24,8 +24,8 @@ Question 5      What are the three biggest pickup zones?
     Answer:     
 
 Question 6      What is the dropoff zone for largest tip picked up from East Harlem North?
-    Solution:   
-    Answer:     
+    Solution:   refer to ../Module1/question6.sql
+    Answer:     JFK Airport
 
 Question 7      Which sequences describes the terraform workflow?
     Solution:   
