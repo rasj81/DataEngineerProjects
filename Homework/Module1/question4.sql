@@ -1,23 +1,13 @@
--- DE Zoomcamp 2025 Cohort - Module 1
+-- DE Zoomcamp 2025 Cohort - Module 1 / Question 4
 -- Student Repo: https://github.com/rasj81/DataEngineerProjects
 
--- fix it...
+SELECT * 
+FROM (SELECT ROW_NUMBER() OVER (PARTITION BY lpep_pickup_datetime::date order by trip_distance DESC) AS r,
+    t.*
+    from green_taxi_data t ) x
+where x.r <= 1
+order by trip_distance desc;
 
-select * 
-from green_taxi_data
-order by trip_distance desc
-limit 1;
-
-select lpep_pickup_datetime,
-	   trip_distance
-from green_taxi_data
-limit 10;
-
-select distinct on (lpep_pickup_datetime) lpep_pickup_datetime::date, trip_distance
-from green_taxi_data
-where lpep_pickup_datetime::date >= '2019-10-01' and
-	  lpep_pickup_datetime::date < '2019-11-01'
-order by lpep_pickup_datetime, trip_distance desc;
-
-
--- 11, 24, 26, 31
+-- spot-check results
+-- select * from green_taxi_data
+-- order by trip_distance desc LIMIT 1;
