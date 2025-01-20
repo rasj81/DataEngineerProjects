@@ -20,13 +20,13 @@ Question 4      What is the longest trip for each day?
     Answer:     2019-10-31
 
 Question 5      What are the three biggest pickup zones?
-    Solution:
-    Answer:
+    Solution:   refer to ../Module1/question5.sql
+    Answer:     
 
 Question 6      What is the dropoff zone for largest tip picked up from East Harlem North?
-    Solution:
-    Answer:
+    Solution:   
+    Answer:     
 
 Question 7      Which sequences describes the terraform workflow?
-    Solution:
-    Answer:
+    Solution:   
+    Answer:     
