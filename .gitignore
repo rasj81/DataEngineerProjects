@@ -1,3 +1,4 @@
 .DS_Store
 Data/
 Dockerfiles/Volumes
+Docker/Volumes/pgadmin_data/pgadmin/pgadmin4.db
