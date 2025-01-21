@@ -29,4 +29,4 @@ Question 6      What is the dropoff zone for largest tip picked up from East Har
 
 Question 7      Which sequences describes the terraform workflow?
     Solution:   
-    Answer:     
+    Answer:     teraform init, terraform plan -auto-apply, terraform rm ??
