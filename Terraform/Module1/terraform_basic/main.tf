@@ -9,12 +9,8 @@ terraform {
 
 provider "google" {
 # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-<<<<<<< HEAD
-#  credentials = $TF_VAR_GCP_KEY
-=======
 #  credentials = 
 #  credentials = $DE_TERRAFORM_GCP
->>>>>>> 80ef311 (Starting with Terraform)
   project = "dezoomcampgcp"
   region  = "us-central1"
 }
