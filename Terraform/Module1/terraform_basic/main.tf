@@ -17,7 +17,7 @@ provider "google" {
 
 
 resource "google_storage_bucket" "data-lake-bucket" {
-  name          = "dezoomcampgcp-bucket"
+  name          = "dezoomcampgcp_bucket"
   location      = "US"
 
   # Optional, but recommended settings:
@@ -43,7 +43,7 @@ resource "google_storage_bucket" "data-lake-bucket" {
 
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "dezoomcampgcp-query"
+  dataset_id = "dezoomcampgcp_query"
   project    = "dezoomcampgcp"
   location   = "US"
 }
