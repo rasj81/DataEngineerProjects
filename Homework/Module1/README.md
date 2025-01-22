@@ -21,7 +21,7 @@ Question 4      What is the longest trip for each day?
 
 Question 5      What are the three biggest pickup zones?
     Solution:   refer to ../Module1/question5.sql
-    Answer:     
+    Answer:     East Harlem North, East Harlem South, Morningside Heights
 
 Question 6      What is the dropoff zone for largest tip picked up from East Harlem North?
     Solution:   refer to ../Module1/question6.sql
@@ -29,4 +29,4 @@ Question 6      What is the dropoff zone for largest tip picked up from East Har
 
 Question 7      Which sequences describes the terraform workflow?
     Solution:   
-    Answer:     teraform init, terraform plan -auto-apply, terraform rm ??
+    Answer:     terraform init, terraform apply -auto-approve, terraform destroy
