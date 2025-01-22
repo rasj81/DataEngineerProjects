@@ -9,8 +9,7 @@ terraform {
 
 provider "google" {
 # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-#  credentials = 
-#  credentials = $DE_TERRAFORM_GCP
+  credentials = "../.creds/my-credentials.json"
   project = "dezoomcampgcp"
   region  = "us-central1"
 }
