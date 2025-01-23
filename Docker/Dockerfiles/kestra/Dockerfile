@@ -1,1 +1,1 @@
-FROM kestra/kestra:latest
+FROM kestra/kestra:v0.20.13
