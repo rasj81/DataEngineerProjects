@@ -50,7 +50,7 @@ services:
     volumes:
       - "../Volumes/ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
     ports:
-      - "5432:5432"
+      - "5431:5432"
   pgadmin:
     container_name: pgadmin
     build:
