@@ -1,5 +1,3 @@
-## Build environment for Data Engineer Zoomcamp ##
-
 volumes:
   postgres-data:
     driver: local
@@ -7,65 +5,6 @@ volumes:
     driver: local
 
 services:
-  python:
-    container_name: python
-    build:
-      context: ./python
-      dockerfile: Dockerfile
-    image: python:3.9.1
-    volumes:
-      - "../Volumes/python_data:/app:rw"
-  jupyter:
-    container_name: jupyter
-    build:
-      context: ./jupyter
-      dockerfile: Dockerfile
-    image: jupyter/pyspark-notebook
-    volumes:
-      - "../Volumes/jupyter_data:/home/codespace/work:rw"
-      - "../Volumes/jupyter-secrets:/etc/secrets:rw"
-      - "../Volumes/jupyter-spark_data:/sparkdata:rw"
-    command:
-     "start-notebook.sh --NotebookApp.token='jupyter'"
-    ports:
-      - "8888:8888"
-    user: root
-    working_dir: /home/codespace/work
-    environment:
-      JUPYTER_ENABLE_LAB: 1
-      NB_USER: ${USER}
-      NB_GID: 1000
-      CHOWN_HOME: 'yes' 
-      CHOWN_HOME_OPTS: '-R'   
-  pgdatabase:
-    container_name: pgdatabase
-    build:
-      context: ./pgdatabase
-      dockerfile: Dockerfile
-    image: postgres:13
-    environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=ny_taxi
-    volumes:
-      - "../Volumes/ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
-    ports:
-      - "5432:5432"
-  pgadmin:
-    container_name: pgadmin
-    build:
-      context: ./pgadmin
-      dockerfile: Dockerfile
-    image: dpage/pgadmin4
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
-      - PGADMIN_DEFAULT_PASSWORD=root
-    volumes:
-      - "../Volumes/pgadmin_data/pgadmin:/var/lib/pgadmin:rw"
-    ports:
-      - "8088:80"
-  
- ## Kestra Setup 
   postgres:
     image: postgres
     volumes:
@@ -79,6 +18,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 10
+
   kestra:
     image: kestra/kestra:latest
     pull_policy: always
