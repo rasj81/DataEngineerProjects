@@ -28,8 +28,4 @@ Question 6      What is the dropoff zone for largest tip picked up from East Har
     Answer:     JFK Airport  
 
 Question 7      Which sequences describes the terraform workflow?  
-<<<<<<< HEAD
-=======
-    Solution:     
->>>>>>> refs/remotes/origin/main
     Answer:     terraform init, terraform apply -auto-approve, terraform destroy  
