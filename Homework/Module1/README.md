@@ -11,21 +11,26 @@ Question 2
     Question:   What hostname and port should pgadmin use?  
     Answer:     db:5433  
 
-Question 3      What is the trip Segmentation Count by mileage range?  
+Question 3  
+    Question:   What is the trip Segmentation Count by mileage range?  
     Solution:   refer to ../Module1/question3.sql  
     Answer:     104,838; 199,013; 109,645; 27,688; 35,202  
 
-Question 4      What is the longest trip for each day?  
+Question 4  
+    Question:   What is the longest trip for each day?  
     Solution:   refer to ../Module1/question4.sql  
     Answer:     2019-10-31  
 
-Question 5      What are the three biggest pickup zones?  
+Question 5  
+    Question:   What are the three biggest pickup zones?  
     Solution:   refer to ../Module1/question5.sql  
     Answer:     East Harlem North, East Harlem South, Morningside Heights  
 
-Question 6      What is the dropoff zone for largest tip picked up from East Harlem North?  
+Question 6  
+    Question:   What dropoff zone for largest tip from East Harlem North?  
     Solution:   refer to ../Module1/question6.sql  
     Answer:     JFK Airport  
 
-Question 7      Which sequences describes the terraform workflow?  
+Question 7  
+    Question:   Which sequences describes the terraform workflow?  
     Answer:     terraform init, terraform apply -auto-approve, terraform destroy  
