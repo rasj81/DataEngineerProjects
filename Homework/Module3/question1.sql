@@ -1,0 +1,1 @@
+SELECT count(*) FROM `dezoomcampgcp.taxidata_hw3_ext.taxidata_hw3_ext_flat`
