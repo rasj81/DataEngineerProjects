@@ -2,9 +2,9 @@
 ## Student Repo: https://github.com/rasj81/DataEngineerProjects
 
 Question 1
-    Question:
-    Solution:
-    Answer:
+    Question:   Provide the version of dlt
+    Solution:   !pip install dlt[duckdb]
+    Answer:     1.6.1
 
 Question 2
     Question:
