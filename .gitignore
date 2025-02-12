@@ -2,3 +2,4 @@
 Data/
 Docker/Volumes/pgadmin_data/pgadmin
 my-credentials.json
+.duckdb
