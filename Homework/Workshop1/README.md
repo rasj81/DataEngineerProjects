@@ -7,16 +7,16 @@ Question 1
     Answer:     1.6.1
 
 Question 2
-    Question:
-    Solution:
-    Answer:
+    Question:   How many tables were created?
+    Solution:   refer to ../Module2/dlt-ETL.ipynb   
+    Answer:     4
 
 Question 3
-    Question:
-    Solution:
-    Answer:
+    Question:   How many records were imported?
+    Solution:   refer to ../Module2/dlt-ETL.ipynb   
+    Answer:     10000
 
 Question 4
-    Question:
-    Solution:
-    Answer:
+    Question:   What is the average trip duration?
+    Solution:   refer to ../Module2/dlt-ETL.ipynb   
+    Answer:     12.3049
